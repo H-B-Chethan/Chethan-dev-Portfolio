@@ -19,8 +19,9 @@ const projects = [
       "Responsive UI with Tailwind CSS",
     ],
     tech: ["React", "Node.js", "MongoDB", "Redux", "Tailwind"],
-    github: "https://github.com/Chethan-H-B",
-    demo: "#",
+    github: "https://github.com/Chethan-H-B/react-ecommerce-tech-store",
+    demo: "https://techstore-react-e-commerce-applicatio.netlify.app/",
+    image: "/images/project1.png",
   },
   {
     id: 2,
@@ -36,8 +37,9 @@ const projects = [
       "Role-based access control (Admin / User)",
     ],
     tech: ["React", "Node.js", "Express", "MySQL", "MongoDB", "JWT"],
-    github: "https://github.com/Chethan-H-B",
-    demo: "#",
+    github: "https://github.com/Chethan-H-B/mern-mysql-auth-crud",
+    demo: "https://github.com/Chethan-H-B/mern-mysql-auth-crud",
+    image: "/images/project3.png",
   },
   {
     id: 3,
@@ -72,6 +74,64 @@ const projects = [
     tech: ["Node.js", "Express", "PostgreSQL", "REST API"],
     github: "https://github.com/Chethan-H-B",
     demo: "#",
+  },
+  {
+    id: 5,
+    title: "TechStore",
+    category: "Frontend",
+    type: "Featured",
+    description:
+      "A modern e-commerce platform showcasing the latest in premium technology with a sleek and responsive design.",
+    features: [
+      "New arrivals section",
+      "Interactive shopping cart",
+      "Responsive design",
+      "Dynamic product filtering",
+    ],
+    tech: ["React", "Node.js", "Tailwind CSS"],
+    github: "https://github.com/Chethan-H-B/techstore",
+    demo: "https://techstore-demo.netlify.app/",
+    image: "/images/project1.png",
+  },
+  {
+    id: 6,
+    title: "Smart Flooring Cost Optimizer",
+    category: "Frontend",
+    type: "Featured",
+    description:
+      "Modern web application that calculates the most cost-effective tile configuration for any room dimension with real-time floor visualization.",
+    features: [
+      "Custom room dimension input (Length & Width)",
+      "Dynamic tile management (Add/Remove unlimited tile types)",
+      "Automatic minimum cost calculation",
+      "Grid-based tile placement algorithm",
+      "Real-time proportional floor visualization",
+      "Cost analytics panel",
+    ],
+    tech: ["HTML5", "Tailwind CSS", "JavaScript", "CSS Grid"],
+    github: "https://github.com/Chethan-H-B/Smart-Flooring-Optimizer",
+    demo: "https://chethan-smart-flooring-optimizer.netlify.app/",
+    image: "/images/project2.png",
+  },
+  {
+    id: 7,
+    title: "Gushwork Web Developer Assignment",
+    category: "Frontend",
+    type: "Featured",
+    description:
+      "Pixel-perfect, responsive web page built using vanilla HTML, CSS, and JavaScript, strictly following the provided Figma design.",
+    features: [
+      "Sticky Header with smooth transition animation",
+      "Image Carousel with Zoom preview",
+      "Hover-based zoom functionality",
+      "Thumbnail navigation support",
+      "Fully Responsive Design (Desktop, Tablet, Mobile)",
+      "Pixel-perfect Figma implementation",
+    ],
+    tech: ["HTML5", "CSS3", "Vanilla JavaScript"],
+    github: "https://github.com/Chethan-H-B/Gushwork-web-assignment",
+    demo: "https://chethan-gushwork.netlify.app/",
+    image: "/images/project4.png",
   },
 ];
 
@@ -135,13 +195,13 @@ const Projects = () => {
           >
             <div className="project-card glass">
               <div className="project-image">
-                <div className="project-placeholder">
-                  {/* PLACEHOLDER IMAGE: 
-                      Replace this placeholder text with your actual project image.
-                      Example: <img src="/project-1.jpg" alt={project.title} />
-                  */}
-                  Add Project Image Here
-                </div>
+                {project.image ? (
+                  <img src={project.image} alt={project.title} />
+                ) : (
+                  <div className="project-placeholder">
+                    Add Project Image Here
+                  </div>
+                )}
                 <div className="project-badges">
                   {project.type === "Featured" && (
                     <span className="badge featured">Featured</span>

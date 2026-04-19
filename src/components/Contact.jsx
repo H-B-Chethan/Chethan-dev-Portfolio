@@ -1,39 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { Mail, MapPin, Send } from "lucide-react";
 import { FaLinkedin } from "react-icons/fa";
 import AnimatedSection from "./AnimatedSection";
 import "./Contact.css";
 
 const Contact = () => {
-  const [status, setStatus] = useState("");
+  const formRef = useRef();
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Sending...");
-    const formData = new FormData(e.target);
+    if (loading) return;
 
-    // Web3Forms integration - Replace with your actual Access Key if you want to use it
-    // Get a free key at https://web3forms.com/
-    formData.append("access_key", "YOUR_WEB3FORMS_ACCESS_KEY_HERE");
+    setLoading(true);
+
+    // EmailJS configuration from environment variables
+    const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData,
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        setStatus("Message Sent Successfully!");
-        e.target.reset();
-      } else {
-        console.log("Error", data);
-        setStatus("Error sending message. Please try again.");
-      }
+      await emailjs.sendForm(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        formRef.current,
+        PUBLIC_KEY,
+      );
+      setSuccess(true);
+      formRef.current.reset();
+      setTimeout(() => setSuccess(false), 5000);
     } catch (error) {
-      console.log(error);
-      setStatus("Something went wrong!");
+      console.error("Error sending message:", error);
+      alert("Failed to send message. Please try again or email me directly.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -126,13 +128,20 @@ const Contact = () => {
 
         <AnimatedSection delay={0.2}>
           <div className="contact-form-wrapper glass">
-            <form className="contact-form" onSubmit={handleSubmit}>
+            <form
+              className="contact-form"
+              ref={formRef}
+              onSubmit={handleSubmit}
+            >
+              {/* Anti-spam honeypot field */}
+              <input type="text" name="hidden" style={{ display: "none" }} />
+
               <div className="form-group-row">
                 <div className="form-group">
                   <label>NAME</label>
                   <input
                     type="text"
-                    name="name"
+                    name="from_name"
                     className="input-field"
                     placeholder="Your Name"
                     required
@@ -142,7 +151,7 @@ const Contact = () => {
                   <label>EMAIL</label>
                   <input
                     type="email"
-                    name="email"
+                    name="from_email"
                     className="input-field"
                     placeholder="your@email.com"
                     required
@@ -172,14 +181,21 @@ const Contact = () => {
                 ></textarea>
               </div>
 
-              <button type="submit" className="btn btn-primary submit-btn">
-                <Send size={18} /> Send Message
+              <button
+                type="submit"
+                className="btn btn-primary submit-btn"
+                disabled={loading}
+              >
+                <Send size={18} /> {loading ? "Sending..." : "Send Message"}
               </button>
-              {status && <p className="form-status">{status}</p>}
+              {success && (
+                <p className="form-status success">
+                  Message sent successfully! I'll get back to you within 24
+                  hours.
+                </p>
+              )}
               <p className="form-footer-note">
-                Prefer email or LinkedIn for faster response. <br />
-                *Note: To make this form work, add a free Web3Forms access key
-                in the code.
+                Prefer email or LinkedIn for faster response.
               </p>
             </form>
           </div>
