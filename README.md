@@ -1,4 +1,10 @@
-CHETHAN H B- Portfolio project
-Information Science and Engineer
+# Hi, I'm Chethan 👋
 
-[Visit My Portfolio: ](https://chethan-hb.netlify.app/)
+🎓 Information Science Engineering Student  
+💻 Full Stack Java Developer
+
+## Portfolio
+
+Explore my projects, skills, and technical work:
+
+🔗([View My Portfolio Website](https://chethan-hb.netlify.app/))
