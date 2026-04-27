@@ -7,7 +7,7 @@
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
   gap: 2rem;
 }
 
@@ -97,7 +97,37 @@
 }
 
 @media (max-width: 768px) {
+  .skills-subtitle {
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+    padding: 0 0.25rem;
+  }
+
   .skills-grid {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .premium-card {
+    padding: 1.5rem;
+  }
+
+  .category-header {
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .skill-category h3 {
+    font-size: 1.1rem;
+  }
+
+  .tech-tags {
+    gap: 0.6rem;
+  }
+
+  .tech-tags span {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.8rem;
   }
 }

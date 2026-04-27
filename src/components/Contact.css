@@ -28,6 +28,7 @@
   gap: 1rem;
   padding: 1rem 1.5rem;
   border-radius: 12px;
+  min-width: 0;
 }
 
 .method-icon-box {
@@ -51,6 +52,7 @@
 .method-value {
   font-weight: 500;
   font-size: 0.95rem;
+  overflow-wrap: anywhere;
 }
 
 .contact-actions {
@@ -109,5 +111,41 @@
   .contact-layout {
     grid-template-columns: 1fr;
     gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .contact-desc {
+    margin-bottom: 2rem;
+  }
+
+  .contact-actions,
+  .form-group-row {
+    grid-template-columns: 1fr;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .contact-form-wrapper {
+    padding: 1.5rem;
+  }
+
+  .form-group-row {
+    gap: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-method {
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .contact-form-wrapper {
+    padding: 1.25rem;
   }
 }

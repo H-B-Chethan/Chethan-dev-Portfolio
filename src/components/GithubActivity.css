@@ -61,9 +61,28 @@
 }
 
 @media (max-width: 768px) {
+  .github-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .stat-card {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .stat-value {
+    font-size: 2rem;
+  }
+
   .github-cta {
     flex-direction: column;
     text-align: center;
     padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .github-stats-grid {
+    grid-template-columns: 1fr;
   }
 }

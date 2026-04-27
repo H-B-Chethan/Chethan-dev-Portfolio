@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion as Motion, AnimatePresence } from "framer-motion";
 import { ChevronUp } from "lucide-react";
 import "./BackToTop.css";
 
@@ -29,7 +29,7 @@ const BackToTop = () => {
   return (
     <AnimatePresence>
       {isVisible && (
-        <motion.button
+        <Motion.button
           className="back-to-top"
           onClick={scrollToTop}
           initial={{ opacity: 0, y: 20 }}
@@ -39,7 +39,7 @@ const BackToTop = () => {
           whileTap={{ scale: 0.9 }}
         >
           <ChevronUp size={24} />
-        </motion.button>
+        </Motion.button>
       )}
     </AnimatePresence>
   );

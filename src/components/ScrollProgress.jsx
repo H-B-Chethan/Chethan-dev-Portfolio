@@ -1,4 +1,4 @@
-import { motion, useScroll, useSpring } from "framer-motion";
+import { motion as Motion, useScroll, useSpring } from "framer-motion";
 import "./ScrollProgress.css";
 
 const ScrollProgress = () => {
@@ -9,7 +9,7 @@ const ScrollProgress = () => {
     restDelta: 0.001,
   });
 
-  return <motion.div className="scroll-progress" style={{ scaleX }} />;
+  return <Motion.div className="scroll-progress" style={{ scaleX }} />;
 };
 
 export default ScrollProgress;

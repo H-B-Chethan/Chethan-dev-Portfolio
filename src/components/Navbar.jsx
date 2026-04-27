@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { Menu, X } from "lucide-react";
 import useScrollSpy from "../hooks/useScrollSpy";
 import "./Navbar.css";
 
@@ -13,6 +13,7 @@ const navItems = [
 ];
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const activeSection = useScrollSpy(
     navItems.map((item) => item.id),
     100,
@@ -26,6 +27,7 @@ const Navbar = () => {
         behavior: "smooth",
         block: "start",
       });
+      setIsMenuOpen(false);
     }
   };
 
@@ -37,7 +39,17 @@ const Navbar = () => {
           Chethan <span className="gradient-text">.dev</span>
         </a>
 
-        <ul className="nav-links">
+        <button
+          className="nav-toggle"
+          type="button"
+          aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={isMenuOpen}
+          onClick={() => setIsMenuOpen((open) => !open)}
+        >
+          {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
+        </button>
+
+        <ul className={`nav-links ${isMenuOpen ? "open" : ""}`}>
           {navItems.map((item) => (
             <li key={item.id}>
               <a
@@ -47,11 +59,7 @@ const Navbar = () => {
               >
                 {item.label}
                 {activeSection === item.id && (
-                  <motion.div
-                    className="active-indicator"
-                    layoutId="activeIndicator"
-                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                  />
+                  <div className="active-indicator" />
                 )}
               </a>
             </li>

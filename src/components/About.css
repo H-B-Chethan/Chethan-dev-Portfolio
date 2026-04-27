@@ -157,9 +157,38 @@
 @media (max-width: 900px) {
   .about-content {
     grid-template-columns: 1fr;
+    gap: 3rem;
   }
   .about-image-wrapper {
     max-width: 300px;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-content {
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+  }
+
+  .skill-tags {
+    gap: 0.5rem;
+  }
+
+  .skill-tag {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.75rem;
+  }
+
+  .experience-box {
+    padding: 1rem;
+  }
+
+  .about-cards {
+    grid-template-columns: 1fr;
   }
 }
