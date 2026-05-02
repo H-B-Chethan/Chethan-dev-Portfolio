@@ -7,4 +7,6 @@
 
 Explore my projects, skills, and technical work:
 
+![Profile Card](result.png)
+
 🔗[View My Portfolio Website:https://chethan-hb.netlify.app](https://chethan-hb.netlify.app/)
