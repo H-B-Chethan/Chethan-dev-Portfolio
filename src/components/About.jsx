@@ -30,12 +30,12 @@ const About = () => {
           <AnimatedSection delay={0.2}>
             <p>
               I'm a <span className="highlight">Full Stack MERN Developer</span>{" "}
-              and final-year{" "}
+              and{" "}
               <span className="highlight">
                 Information Science & Engineering
               </span>{" "}
-              student at Global Academy of Technology, Bengaluru (CGPA: 7.92),
-              graduating in 2026.
+              graduate from Global Academy of Technology, Bengaluru (CGPA:
+              8.08), having completed my graduation in June 2026.
             </p>
           </AnimatedSection>
 
@@ -120,8 +120,8 @@ const About = () => {
         {[
           {
             icon: GraduationCap,
-            title: "Final Year Student",
-            desc: "ISE @ GAT, Bengaluru — CGPA 7.92",
+            title: "Information Science & Engineering Graduate",
+            desc: "ISE @ GAT, Bengaluru — CGPA 8.08",
           },
           {
             icon: Briefcase,

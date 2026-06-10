@@ -4,7 +4,10 @@ import AnimatedSection from "./AnimatedSection";
 import "./Resume.css";
 
 const resumeHighlights = [
-  { title: "Final Year ISE Student", subtitle: "GAT Bengaluru · CGPA 7.92" },
+  {
+    title: "Information Science & Engineering Graduate",
+    subtitle: "GAT Bengaluru · CGPA 8.08",
+  },
   { title: "10+ Real-World Projects", subtitle: "Built with MERN stack" },
   { title: "REST APIs & Auth Systems", subtitle: "JWT, MongoDB, PostgreSQL" },
   { title: "Full Stack Internship", subtitle: "CampusPe - Edufu Technologies" },
