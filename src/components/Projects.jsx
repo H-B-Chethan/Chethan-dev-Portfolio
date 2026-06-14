@@ -19,7 +19,7 @@ const projects = [
       "Responsive UI with Tailwind CSS",
     ],
     tech: ["React", "Node.js", "MongoDB", "Redux", "Tailwind"],
-    github: "https://github.com/Chethan-H-B/react-ecommerce-tech-store",
+    github: "https://github.com/H-B-Chethan/react-ecommerce-tech-store",
     demo: "https://techstore-react-e-commerce-applicatio.netlify.app/",
     image: "/images/project1.png",
   },
@@ -37,8 +37,8 @@ const projects = [
       "Role-based access control (Admin / User)",
     ],
     tech: ["React", "Node.js", "Express", "MySQL", "MongoDB", "JWT"],
-    github: "https://github.com/Chethan-H-B/mern-mysql-auth-crud",
-    demo: "https://github.com/Chethan-H-B/mern-mysql-auth-crud",
+    github: "https://github.com/H-B-Chethan/mern-mysql-auth-crud",
+    demo: "https://github.com/H-B-Chethan/mern-mysql-auth-crud",
     image: "/images/project3.png",
   },
   {
@@ -55,7 +55,7 @@ const projects = [
       "Role-based middleware (Admin / User)",
     ],
     tech: ["Node.js", "Express", "MongoDB", "JWT", "REST API"],
-    github: "https://github.com/Chethan-H-B",
+    github: "https://github.com/H-B-Chethan",
     demo: "#",
   },
   {
@@ -72,7 +72,7 @@ const projects = [
       "PostgreSQL with query optimization",
     ],
     tech: ["Node.js", "Express", "PostgreSQL", "REST API"],
-    github: "https://github.com/Chethan-H-B",
+    github: "https://github.com/H-B-Chethan",
     demo: "#",
   },
   {
@@ -89,7 +89,7 @@ const projects = [
       "Dynamic product filtering",
     ],
     tech: ["React", "Node.js", "Tailwind CSS"],
-    github: "https://github.com/Chethan-H-B/techstore",
+    github: "https://github.com/H-B-Chethan/techstore",
     demo: "https://techstore-demo.netlify.app/",
     image: "/images/project1.png",
   },
@@ -109,7 +109,7 @@ const projects = [
       "Cost analytics panel",
     ],
     tech: ["HTML5", "Tailwind CSS", "JavaScript", "CSS Grid"],
-    github: "https://github.com/Chethan-H-B/Smart-Flooring-Optimizer",
+    github: "https://github.com/H-B-Chethan/Smart-Flooring-Optimizer",
     demo: "https://chethan-smart-flooring-optimizer.netlify.app/",
     image: "/images/project2.png",
   },
@@ -129,7 +129,7 @@ const projects = [
       "Pixel-perfect Figma implementation",
     ],
     tech: ["HTML5", "CSS3", "Vanilla JavaScript"],
-    github: "https://github.com/Chethan-H-B/Gushwork-web-assignment",
+    github: "https://github.com/H-B-Chethan/Gushwork-web-assignment",
     demo: "https://chethan-gushwork.netlify.app/",
     image: "/images/project4.png",
   },
@@ -277,3 +277,4 @@ const Projects = () => {
 };
 
 export default Projects;
+

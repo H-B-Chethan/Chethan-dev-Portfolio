@@ -38,7 +38,7 @@ const Hero = () => {
         </div>
         
         <div className="hero-social">
-          <a href="https://github.com/Chethan-H-B" target="_blank" rel="noopener noreferrer" className="social-btn glass">
+          <a href="https://github.com/H-B-Chethan" target="_blank" rel="noopener noreferrer" className="social-btn glass">
             <FaGithub size={20} />
             <span>GITHUB</span>
           </a>
@@ -64,3 +64,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
