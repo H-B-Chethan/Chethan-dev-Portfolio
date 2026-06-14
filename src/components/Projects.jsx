@@ -7,22 +7,24 @@ import "./Projects.css";
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "Smart College Placement Management System",
     category: "Full Stack",
     type: "Featured",
     description:
-      "Full-featured shopping application with product management, cart, and checkout flow. Optimized for performance and mobile responsiveness.",
+      "Developed a full-stack Placement Management System with Student, Recruiter, and Admin role-based access using the MERN stack.",
     features: [
-      "Product search, filter & category browsing",
-      "Shopping cart with Redux state management",
-      "Simulated checkout & order tracking",
-      "Responsive UI with Tailwind CSS",
+      "Student profile management and eligibility-based job applications",
+      "Recruiter dashboard for job posting and candidate management.",
+      "Admin dashboard for user administration and analytics.",
+      "JWT authentication, REST APIs, and MongoDB Atlas integration",
     ],
-    tech: ["React", "Node.js", "MongoDB", "Redux", "Tailwind"],
-    github: "https://github.com/H-B-Chethan/react-ecommerce-tech-store",
-    demo: "https://techstore-react-e-commerce-applicatio.netlify.app/",
-    image: "/images/project1.png",
+    tech: ["Node.js", "Express", "MongoDB", "JWT", "REST API"],
+    github:
+      "https://github.com/H-B-Chethan/Smart-College-Placement-Management-System",
+    demo: "https://smart-placement-mgmt-system.netlify.app/",
+    image: "/images/project5.png",
   },
+
   {
     id: 2,
     title: "MERN Task Dashboard",
@@ -37,30 +39,34 @@ const projects = [
       "Role-based access control (Admin / User)",
     ],
     tech: ["React", "Node.js", "Express", "MySQL", "MongoDB", "JWT"],
-    github: "https://github.com/H-B-Chethan/mern-mysql-auth-crud",
-    demo: "https://github.com/H-B-Chethan/mern-mysql-auth-crud",
+    github: "https://github.com/H-B-Chethan/task-management-dashboard",
+    demo: "https://github.com/H-B-Chethan/task-management-dashboard",
     image: "/images/project3.png",
   },
+
   {
     id: 3,
-    title: "Secure Auth System",
+    title: "E-Commerce Platform",
     category: "Backend",
     type: "Featured",
     description:
-      "Robust authentication backend providing JWT login, signup, password reset and role management — production-ready patterns throughout.",
+      "Full-featured shopping application with product management, cart, and checkout flow. Optimized for performance and mobile responsiveness.",
     features: [
-      "JWT access & refresh token flow",
-      "Secure password hashing with bcrypt",
-      "Email-based password reset",
-      "Role-based middleware (Admin / User)",
+      "Product search, filter & category browsing",
+      "Shopping cart with Redux state management",
+      "Simulated checkout & order tracking",
+      "Responsive UI with Tailwind CSS",
     ],
-    tech: ["Node.js", "Express", "MongoDB", "JWT", "REST API"],
-    github: "https://github.com/H-B-Chethan",
-    demo: "#",
+    tech: ["React", "Node.js", "MongoDB", "Redux", "Tailwind"],
+    github:
+      "https://github.com/H-B-Chethan/Dark-Mode-UI-Theme-Management-System",
+    demo: "https://github.com/H-B-Chethan/Dark-Mode-UI-Theme-Management-System",
+    image: "/images/project1.png",
   },
+
   {
     id: 4,
-    title: "REST API Server",
+    title: "Dark Mode UI Theme Management System",
     category: "Backend",
     type: "Featured",
     description:
@@ -72,8 +78,10 @@ const projects = [
       "PostgreSQL with query optimization",
     ],
     tech: ["Node.js", "Express", "PostgreSQL", "REST API"],
-    github: "https://github.com/H-B-Chethan",
-    demo: "#",
+    github:
+      "https://github.com/H-B-Chethan/Dark-Mode-UI-Theme-Management-System",
+    demo: "https://github.com/H-B-Chethan/Dark-Mode-UI-Theme-Management-System",
+    image: "/images/project6.png",
   },
   {
     id: 5,
@@ -277,4 +285,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
